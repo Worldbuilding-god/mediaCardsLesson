@@ -14,9 +14,7 @@ img {
 /* End of body rules **********/
 
 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(12, [col-start] 1fr);
-    gap: 20px;
+    
 }
 
 /* Card rules *****************/
