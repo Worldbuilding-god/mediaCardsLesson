@@ -13,15 +13,73 @@ img {
 }
 /* End of body rules **********/
 
-.wrapper {
-    
+.container {
+   display:grid;
+   grid-template-columns: minmax(230px, 1fr);
+   grid-gap: 20px;
+   padding: 20px;
 }
 
 /* Card rules *****************/
+article{
+    display: grid;
+    grid-template-rows: max-content 200px 1fr;
+    border: 1px solid #999;
+    border-radius: 15px;
 
+}
+.card header{
+    display: flexbox;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background-color: #000067;
+    border-radius: 15px 15px 0 0;
+    color: white;
+    min-height: 10em;
+    align-items: center;
+}
+.card header h2{
+    text-align: center;
 
+}
+.card img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.content p{
+    padding: 2% 3%;
+}
+article footer{
+    background-color: #0000eb;
+    border-radius: 0 0 15px 15px;
+    color: white;
+}
+article footer button{
+    display: inline-block;
+}
+article footer h4{
+    display: inline-block;
+}
 /* Styles for all cards *******************/
 
 
 
 /* End All Cards Styles *******************/
+@media screen and (min-width:764px){
+    .container {
+        display:grid;
+        grid-template-columns: repeat(2, minmax(230px, 1fr));
+        grid-gap: 20px;
+        padding: 20px;
+     }
+}
+@media screen and (min-width:1280px){
+    .container {
+        display:grid;
+        grid-template-columns: repeat(3, minmax(230px, 1fr));
+        grid-gap: 20px;
+        padding: 20px;
+     }
+}
